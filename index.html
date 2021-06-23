@@ -330,7 +330,7 @@
                         <!-- <p>不論畢業後你投身於何種行業，與AI共處已是基本技能</p> -->
                         <div class="contact-form ">
                             <div class="row ">
-                                
+
                                 <!-- <div class="col-sm-5 your-name col-sm-offset-1 ">
                                     <div class="form-group ">
 
@@ -409,6 +409,16 @@
 	============================================================== -->
     <script type="text/javascript " src="js/styleswitcher.js "></script>
     <script type="text/javascript " src="js/demo.js "></script>
+    <script>
+        $(function() {
+            $(".btn").click(function() {
+                $(this).button('loading').delay(1000).queue(function() {
+                    $(this).button('reset');
+                    // $(this).dequeue(); 
+                });
+            });
+        });
+    </script>
 
     <!-- <div class="demo-style-switch " id="switch-style ">
         <a id="toggle-switcher " class="switch-button "><i class="fa fa-cog fa-spin fa-fw "></i></a>
